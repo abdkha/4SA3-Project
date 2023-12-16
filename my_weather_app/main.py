@@ -1,14 +1,12 @@
 # main.py
-import re
-import requests
-import sys
-sys.path.append('C:\\Users\\Tabish\\Desktop\\4SA3 - Software Architecture\\Project\\my_weather_app\\')
-from getpass import getpass
-from pymongo import MongoClient
-from factory_module import Factory
+import re                               # Regular expression library
+import requests                         # Requests library for HTTP requests
+from getpass import getpass             # Library for hiding user input (passwords)
+from pymongo import MongoClient         # Library for MongoDB
+from factory_module import Factory      # Factory class for creating WeatherData objects
 
 # Initialize MongoDB
-db_uri = "mongodb+srv://primoo357:#h#E67AP@mangodb.0xoamzf.mongodb.net/"
+db_uri = "mongodb+srv://primoo357:#h#E67AP@mangodb.0xoamzf.mongodb.net/"        
 db_name = "my_weather_app_db"
 client = MongoClient(db_uri)
 db = client[db_name]
